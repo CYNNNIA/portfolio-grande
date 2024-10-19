@@ -1,0 +1,487 @@
+:root {
+  --background: #53f8f2d3;
+  --heading: #3613e6;
+  --body: #101d77;
+  --sidebar-bg: #f19de5;
+  --link-hover: #3794ff;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(255, 192, 203, 0.545);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--body);
+  display: flex;
+  flex-direction: column;
+}
+
+header.sidebar {
+  background-color: #ffc0cb;
+  color: rgb(9, 71, 217);
+  width: 18vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+header.sidebar img {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+header h1 {
+  font-size: 2rem; /* Reducir tamaño de fuente */
+  margin-left: 1rem;
+  margin-top: -5rem;
+  text-align: center;
+}
+
+header.sidebar h2,
+header.sidebar h3 {
+  margin-top: 0; /* Quitar margen superior */
+  margin-bottom: 0.6rem; /* Quitar margen inferior */
+  margin-left: 10px;
+  color: white;
+}
+
+header.sidebar h2 {
+  font-size: 1.5rem; /* Reducir tamaño de fuente */
+  color: rgb(58, 119, 188);
+}
+
+header.sidebar h3 {
+  font-size: 1.2rem; /* Reducir tamaño de fuente */
+  color: rgb(247, 249, 250);
+}
+
+.caracteristicas {
+  margin-top: -5rem;
+  margin-left: -4vw;
+}
+
+.caracteristicas ul li {
+  font-size: 1rem;
+}
+header nav ul {
+  list-style-type: none;
+  width: 100%;
+  margin-top: -5rem; /* Añadir margen superior */
+  padding: 0;
+  margin-bottom: -5rem;
+}
+
+header nav ul li {
+  width: 100%;
+  margin: 0.25rem 0; /* Reducir margen superior e inferior */
+  background-color: white;
+}
+
+header nav ul li a {
+  color: var(--body);
+  text-decoration: none;
+  padding: 0.5rem; /* Ajustar padding */
+  display: block;
+  transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+  background-color: #53f8f2d3;
+  color: pink;
+}
+
+main {
+  margin-left: 18vw;
+  padding: 2rem;
+  width: calc(100% - 18vw);
+}
+
+section {
+  margin-bottom: 3rem;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.aboutme > img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.aboutme > p {
+  max-width: 80vw;
+  text-align: center;
+  background-color: #ffc0cb;
+}
+
+.aboutme > ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: var(--link-hover);
+}
+
+.aboutme li {
+  padding: 2px 8px;
+  background-color: var(--background);
+  border-radius: 1rem;
+  color: var(--body);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.projects {
+  margin: 30px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.projects h1 {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  color: var(--heading);
+  text-align: center;
+  background-color: #e7e7f68a;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+}
+
+/* Main.css */
+
+.tabs-container {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #f4f4f9;
+  color: var(--heading);
+  font-size: 2em;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #ddd;
+}
+
+.tab.active {
+  border-bottom: 2px solid #333;
+}
+
+/* Estilos para el contenido */
+#content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-height: 900px) {
+  header.sidebar {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Alinea los contenedores verticalmente */
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  main {
+    margin-left: 10vw;
+  }
+
+  header.sidebar img {
+    display: none;
+  }
+
+  header.sidebar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; /* Añade espacio entre los contenedores */
+  }
+
+  header.sidebar h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  header.sidebar nav {
+    width: 100%;
+  }
+
+  header.sidebar nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  header.sidebar nav ul li {
+    margin-right: 20px;
+  }
+
+  header.sidebar nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  header.sidebar nav ul li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header.sidebar .otros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .otros h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .otros ul {
+    display: flex; /* Alinea horizontalmente */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  header.sidebar .otros li {
+    margin-right: 10px; /* Añade espacio entre los elementos de la lista */
+  }
+
+  header.sidebar .otros li:last-child {
+    margin-right: 0; /* Elimina el margen del último elemento */
+  }
+
+  header.sidebar .caracteristicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+  }
+
+  header.sidebar .caracteristicas h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .caracteristicas ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header.sidebar .caracteristicas li {
+    margin: 5px 10px;
+  }
+}
+
+.tab {
+  font-size: 1rem;
+}
+
+@media (max-width: 1370px) {
+  main {
+    margin-left: 10vw;
+  }
+  header.sidebar {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Alinea los contenedores verticalmente */
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  header.sidebar img {
+    display: none;
+  }
+
+  header.sidebar > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem; /* Añade espacio entre los contenedores */
+  }
+
+  header.sidebar h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+
+  header.sidebar nav {
+    width: 100%;
+  }
+
+  header.sidebar nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+
+  header.sidebar nav ul li {
+    margin-right: 20px;
+  }
+
+  header.sidebar nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  header.sidebar nav ul li a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header.sidebar .otros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .otros h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .otros ul {
+    display: flex; /* Alinea horizontalmente */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  header.sidebar .otros li {
+    margin-right: 10px; /* Añade espacio entre los elementos de la lista */
+  }
+
+  header.sidebar .otros li:last-child {
+    margin-right: 0; /* Elimina el margen del último elemento */
+  }
+
+  header.sidebar .caracteristicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+  }
+
+  header.sidebar .caracteristicas h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  header.sidebar .caracteristicas ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header.sidebar .caracteristicas li {
+    margin: 5px 10px;
+  }
+  .projects p {
+    display: none;
+  }
+
+  .aboutme p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    margin-left: 6vw;
+    padding: 0;
+    width: 90%;
+  }
+
+  .aboutme p {
+    font-size: 1rem;
+  }
+
+  header.sidebar .nav-horizontal-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;
+  }
+  .nav-horizontal-list li:last-child {
+    margin-left: -20px;
+  }
+  .projects p {
+    display: none;
+  }
+
+  .projects h1 {
+    font-size: 1.2em;
+  }
+}

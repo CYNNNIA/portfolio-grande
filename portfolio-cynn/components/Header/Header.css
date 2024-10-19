@@ -1,0 +1,16 @@
+header {
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(87, 215, 247);
+}
+
+header li {
+  text-align: left;
+  list-style: none;
+  color: rgb(1, 15, 15);
+  font-size: 18px;
+  margin: 5px;
+}
